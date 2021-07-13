@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #title {
+            width: 100%;
+            font-size: 50px;
+            background-color: purple;
+            color: white;
+            text-align: center;
+    
+        }
+        body {
+            background-image: 
+            url("https://img.freepik.com/free-photo/handshake-close-up-executives_1098-1384.jpg?size=626&ext=jpg");
+            background-size: cover;
+            background-repeat: no repeat;
+            background-position: center;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: lightgray;
+            
+        }
+        #description {
+            text-align: center;
+            font-size: 25px;
+            font: Sans-serif;
+            color: rgb(15, 1, 15);
+    
+        }
+        @media (min-width: 500px){
+            .survey-form {
+                font-size: 20px;
+                display: flex;
+                flex-basis: 100%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                justify-content: center;
+                
+                background-color: #000000;
+                margin-left: 80px;
+                margin-right: 80px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                background: rgb(0,0,0, 0.9);
+                color: rgb(245, 165, 245);
+                
+            }
+        }
+        .form-control {
+            width: 100%; 
+        }
+        #submit{
+            color: red;
+        }
+    </style>
+    <head>
+        <title>DaSonn Survey Form</title>
+    </head>
+    <body>
+            <header>
+                <h1 id="title">DaSonn Survey Form</h1>
+                <p id="description">DaSonn welcomes you! Kindly fill this form.</p>
+            </header>
+        <div class="survey-form"    >
+            <form id="survey-form">
+                <label id="name-label" for="name">Name:</label>
+                <br>
+                <input id="name" 
+                    type="text" 
+                    name="name" 
+                    placeholder="input your name here" 
+                    class="form-control" 
+                    required>
+                <br>
+                <br>
+                <label id="email-label" for="email">Email:</label>
+                <br>
+                <input id="email" 
+                    type="email" 
+                    name="email" 
+                    placeholder="input your email here"
+                    class="form-control"
+                    required>
+                <br>
+                <br>
+                <label id="number-label" for="number">Number:</label><br>
+                <input id="number" 
+                    type="number" 
+                    name="numbe" 
+                    placeholder="input your phone number here" 
+                    min="11" 
+                    max="14"
+                    class="form-control"
+                    required>
+                <br>
+                <br>
+                <label id="dropdown-label" for="dropdown">Qualification:</label>
+                <br>
+                <select id="dropdown" type="dropdown" name="qualifition" placeholder="select an option" class="form-control" required>
+                    <option disabled selected value>select qualification</option>
+                    <option value="student">student</option>
+                    <option value="graduate">graduate</option>
+                </select>
+                <br>
+                <br>
+                <label id="dropdown-label" for="dropdown2">Occupation:</label><br>
+                <select id="dropdown2" type="dropdown" name="occupation" placeholder="select an option" class="form-control" required>
+                    <option disabled selected value>select occupation</option>
+                    <option value="student">student</option>
+                    <option value="employed">employed</option>
+                    <option value="unemployed">unemployed</option>
+                    <option value="other">other</option>
+                </select>
+                <br>
+                <br>
+                <div>
+                    <label for="gender">Gender:</label><br>
+                    <label><input id="gender" type="radio" name="radio" value="male" checked>Male</label><br>
+                    <label><input id="gender" type="radio" name="radio" value="female">Female</label>
+                </div>
+                <br>
+                <div>
+                    <label for="language">Preferred Language:</label><br>
+                    <label><input id="language" type="checkbox" value="english">English</label><br>
+                    <label><input id="language" type="checkbox" value="spanish">Spanish</label><br>
+                    <label><input id="language" type="checkbox" value="french">French</label><br>
+                    <label><input id="language" type="checkbox" value="other">Other</label>
+                </div>
+                <br>
+                <div>
+                    <p>Comment here:</p>
+                    <textarea id="comments" name="comments" placeholder="talk to us, comment what is on your mind">
+                    </textarea>
+                </div> 
+                <br>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
